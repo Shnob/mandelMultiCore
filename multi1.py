@@ -10,7 +10,7 @@ scl = 1 * 10**10 #7
 maximum = 1 * 10**14
 deltaScale = 1#(10**0.2) / (10**0.0)
 
-limit = 6000
+limit = 20000
 
 cores = cpu_count()
 

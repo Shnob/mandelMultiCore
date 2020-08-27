@@ -6,11 +6,11 @@ multi = 1
 finalRes = (512, 512)
 res = (int(finalRes[0] * multi), int(finalRes[1] * multi))
 position = (-0.5449634653, 0.61856500519)#(-0.101105000001498, 0.956000000012302)#(-0.721, 0.2)
-scl = 1 * 10**10 #7
-maximum = 1 * 10**14
-deltaScale = 1#(10**0.2) / (10**0.0)
+scl = 10**0# * 10**10 #7
+maximum = 1 * 10**10
+deltaScale = 1.2#(10**0.2) / (10**0.0)
 
-limit = 20000
+limit = 1000#20000
 
 cores = cpu_count()
 
@@ -84,5 +84,7 @@ if __name__ == "__main__":
         if scl >= maximum:
             break
         scl = deltaScale * scl
+        if scl > 10**2:
+            limit = 20000
         print(scl)
-        break
+        #break
